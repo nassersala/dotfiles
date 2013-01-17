@@ -1,9 +1,9 @@
 
 call pathogen#infect()
 
-syntax on
 set background=dark nocompatible
 set directory=/tmp//
+
 
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -65,3 +65,13 @@ nnoremap <c-l> <c-w>l
 "for ctrlp plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'ra'
+
+" ui stuff
+" Always show tab bar
+set showtabline=2
+
+set cmdheight=2
+
+" highlight current line
+set cursorline
+hi CursorLine cterm=NONE ctermbg=black
