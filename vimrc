@@ -4,6 +4,8 @@ call pathogen#infect()
 set background=dark nocompatible
 set directory=/tmp//
 
+map ,w :w<cr>
+
 
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -68,7 +70,7 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " ui stuff
 " Always show tab bar
+set number
 set showtabline=2
-
 set cmdheight=2
 

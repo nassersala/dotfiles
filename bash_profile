@@ -1,6 +1,7 @@
 #programs aliases
 alias food='ruby ~/ruby/food_finder/init.rb'
 
+export VISUAL=/usr/local/bin/vim
 export EDITOR=/usr/local/bin/vim
 alias vi=/usr/local/bin/vi
 alias vim=/usr/local/bin/vim
@@ -30,13 +31,15 @@ source ~/git-completion.bash
 # Show branch in status line
 PS1='[\W$(__git_ps1 " (%s)")]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"' 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 
 export PATH=/usr/local/bin:$PATH
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 #hitory settings
 export HISTCONTROL=ignoreboth 
 export HISTIGNORE="history:pwd:exit:df:ls:ls -la:ll" 
 
+#coloring grep results
+export GREP_OPTIONS="--color=auto"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
